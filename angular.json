@@ -1,0 +1,44 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "src/tdesign",
+  "projects": {
+    "button": {
+      "projectType": "library",
+      "root": "src/tdesign/button",
+      "sourceRoot": "src/tdesign/button/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "src/tdesign/button/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "src/tdesign/button/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "src/tdesign/button/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "src/tdesign/button/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
+    
+  },
+  "cli": {
+    "analytics": "695870b3-3a9b-4e5a-9b7f-cadaa17029af"
+  }
+}
