@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "src/tdesign",
   "projects": {
-    "button": {
+    "tdesign": {
       "projectType": "library",
-      "root": "src/tdesign/button",
-      "sourceRoot": "src/tdesign/button/src",
-      "prefix": "lib",
+      "root": "src/tdesign",
+      "sourceRoot": "src/tdesign/src",
+      "prefix": "t",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "src/tdesign/button/ng-package.json"
+            "project": "src/tdesign/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "src/tdesign/button/tsconfig.lib.prod.json"
+              "tsConfig": "src/tdesign/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "src/tdesign/button/tsconfig.lib.json"
+              "tsConfig": "src/tdesign/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,7 +27,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "src/tdesign/button/tsconfig.spec.json",
+            "tsConfig": "src/tdesign/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"
