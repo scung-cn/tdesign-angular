@@ -13,4 +13,4 @@ import { ButtonComponent } from './button.component';
     ButtonComponent
   ]
 })
-export class ButtonModule { }
+export class TButtonModule { }
